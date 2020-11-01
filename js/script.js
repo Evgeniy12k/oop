@@ -36,10 +36,10 @@
 
              }
 
-            //  создаем класс с #
+            //  создаем по Id с #
              if(this.selector[0] === '#'){
                 let newParag = document.createElement('p');
-                newParag.classList.add(this.selector.substring(1));
+                newParag.setAttribute('id',this.selector.substring(1));
                 newParag.textContent = this.message; 
                 newParag.style.height = this.height + 'px';
                 newParag.style.width = this.width + 'px';
