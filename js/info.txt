@@ -1,0 +1,29 @@
+class Test {
+
+    constructor(selector, height, width, bg,  fontSize, message){
+
+         this.selector = selector;
+         this.height = height;
+         this.width = width;
+         this.bg = bg;
+         this.fontSize = fontSize;
+         this.message = message;
+    }
+
+     //      document.querySelector(this.selector).innerHTML = `<div class = "${ this.height} ${ this.width} ${ this.bg} ${ this.fontSize} ">${this.message}</div>`;
+    //  
+// создание метода 
+     showTest(){
+        
+        
+        document.querySelector(this.selector).innerHTML = `<div class = "${ this.height} ${ this.width} ${ this.bg} ${ this.fontSize} ">${this.message}</div>`;
+
+          document.querySelector(this.selector).innerHTML = `<p class = "${ this.height} ${ this.width} ${ this.bg} ${ this.fontSize} ">${this.message}</p>`;;
+     }
+ }
+ let domElementary = new Test('.test2', '150','200', 'red', '100', ' итог');
+ let domElementary2 = new Test('#test2', '50','100', 'yellow', '20', ' Второй');
+
+domElementary.showTest();
+
+domElementary2.showTest();
